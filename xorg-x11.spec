@@ -1,11 +1,11 @@
 %define libxorg %mklibname xorg-x11
 
 Name: xorg-x11
-Version: 7.1.0
-Release: %mkrel 6
+Version: 7.2.0
+Release: %mkrel 1
 Summary: X11 metapackage
 Group: Development/X11
-License: GPL
+License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
 
 Requires: x11-data-xkbdata
@@ -35,7 +35,7 @@ mkdir -p %{buildroot}%{_libdir}/X11
 %package -n %{libxorg}
 Summary: X11 libraries
 Group: Development/X11
-License: GPL
+License: MIT
 
 Requires: libapplewm
 Requires: libdmx
@@ -65,10 +65,7 @@ Requires: libxinerama
 Requires: libxkbfile
 Requires: libxkbui
 Requires: libxmu
-Requires: libxp
 Requires: libxpm
-Requires: libxprintapputil
-Requires: libxprintutil
 Requires: libxrandr
 Requires: libxrender
 Requires: libxres
@@ -128,10 +125,7 @@ Requires: libxinerama-devel
 Requires: libxkbfile-devel
 Requires: libxkbui-devel
 Requires: libxmu-devel
-Requires: libxp-devel
 Requires: libxpm-devel
-Requires: libxprintapputil-devel
-Requires: libxprintutil-devel
 Requires: libxrandr-devel
 Requires: libxrender-devel
 Requires: libxres-devel
@@ -190,10 +184,7 @@ Requires: libxinerama-static-devel
 Requires: libxkbfile-static-devel
 Requires: libxkbui-static-devel
 Requires: libxmu-static-devel
-Requires: libxp-static-devel
 Requires: libxpm-static-devel
-Requires: libxprintapputil-static-devel
-Requires: libxprintutil-static-devel
 Requires: libxrandr-static-devel
 Requires: libxrender-static-devel
 Requires: libxres-static-devel
@@ -315,7 +306,6 @@ the font server API, etc.
 %package server
 Summary: The X server and associated modules
 Group: System/X11
-Requires: %{name}-xfs
 Requires: %{name} = %{version}
 Obsoletes: xserver-wrapper
 Obsoletes: XFree86-server
@@ -413,7 +403,6 @@ used in connecting to the X server.
 %package Xnest
 Summary: A nested X11 server
 Group: System/X11
-Requires: %{name}-xfs
 Requires: %{name} = %{version}
 Obsoletes: XFree86-Xnest
 Provides: XFree86-Xnest = %{version}-%{release}
@@ -439,7 +428,6 @@ testing purposes).
 %package Xdmx
 Summary: Distributed Multi-head X server
 Group: System/X11
-Requires: %{name}-xfs
 Requires: %{name} = %{version}
 Provides: XFree86-Xdmx = %{version}-%{release}
 Provides: X11-Xdmx
@@ -464,27 +452,6 @@ and standard and/or commonly available X server extensions.
 
 #------------------------------------------------------------------------------
 
-%package Xprt
-Summary: A X11 Print server
-Group: System/X11
-Requires: %{name}-xfs
-Requires: %{name} = %{version}
-Provides: XFree86-Xprint = %{version}-%{release}
-Provides: X11-Xprint
-Provides: xprint
-Obsoletes: xprint
-Requires: x11-server-xprt
-
-%description Xprt
-A X11 Print server. Xprt is an advanced printing system which
-enables X11 applications to use devices like printers, FAX or
-create documents in formats like PostScript, PDF, PCL, etc.
-
-%files Xprt
-%defattr(-,root,root)
-
-#------------------------------------------------------------------------------
-
 %package xfs
 Group: System/Servers
 Summary: Font server for X11
@@ -500,13 +467,8 @@ remotely with this package, and the remote system will be able to use all
 fonts installed on the font server, even if they are not installed on the
 remote computer.
 
-%trigger xfs -- xorg-x11-xfs < 7.1.0
-# fix font paths in the old config
-[ -f %{_sysconfdir}/X11/fs/config ] && sed -i 's,\(/X11R6\)\?/lib/X11,/share,g' %{_sysconfdir}/X11/fs/config
-
 %files xfs
 %defattr(-,root,root)
 
 #------------------------------------------------------------------------------
-
 
