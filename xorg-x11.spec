@@ -2,7 +2,7 @@
 
 Name: xorg-x11
 Version: 7.2.0
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
@@ -15,6 +15,7 @@ Requires: x11-apps
 Requires: x11-tools
 Requires: x11-docs
 Requires: fonts-ttf-dejavu
+Requires: fonts-ttf-liberation
 Requires: x11-font-bh-ttf
 Requires: x11-font-type1
 Requires: x11-font-misc 
