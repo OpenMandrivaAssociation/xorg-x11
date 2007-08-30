@@ -456,7 +456,6 @@ and standard and/or commonly available X server extensions.
 %package xfs
 Group: System/Servers
 Summary: Font server for X11
-Prereq: shadow-utils setup
 Requires: initscripts >= 5.27-28mdk
 Requires: xfs
 Obsoletes: XFree86-xfs
