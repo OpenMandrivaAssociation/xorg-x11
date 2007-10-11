@@ -1,8 +1,8 @@
 %define libxorg %mklibname xorg-x11
 
 Name: xorg-x11
-Version: 7.2.0
-Release: %mkrel 2
+Version: 7.3
+Release: %mkrel 1
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
