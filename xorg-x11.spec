@@ -6,7 +6,6 @@ Release: %mkrel 1
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
-BuildRoot: %{_tmppath}/%{name}-root
 
 Requires: x11-data-xkbdata
 Requires: x11-data-bitmaps
