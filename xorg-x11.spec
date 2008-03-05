@@ -2,7 +2,7 @@
 
 Name: xorg-x11
 Version: 7.3
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
