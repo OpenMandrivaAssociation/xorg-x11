@@ -2,7 +2,7 @@
 
 Name: xorg-x11
 Version: 7.3
-Release: %mkrel 2
+Release: %mkrel 3
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
@@ -26,9 +26,6 @@ Requires: xkbcomp
 %description
 X11 metapackage
 
-%install 
-mkdir -p %{buildroot}%{_libdir}/X11
-
 %files
 %defattr(-,root,root)
 
@@ -50,7 +47,7 @@ Requires: libsm
 Requires: libwindowswm
 Requires: libx11
 Requires: libxau
-Requires: libxaw8
+Requires: libxaw7
 Requires: libxcomposite
 Requires: libxcursor
 Requires: libxdamage
