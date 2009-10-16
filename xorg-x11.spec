@@ -2,7 +2,7 @@
 
 Name: xorg-x11
 Version: 7.3
-Release: %mkrel 5
+Release: %mkrel 6
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
@@ -419,33 +419,6 @@ will run as a client of your real X server (perhaps for
 testing purposes).
 
 %files Xnest 
-%defattr(-,root,root)
-
-#------------------------------------------------------------------------------
-
-%package Xdmx
-Summary: Distributed Multi-head X server
-Group: System/X11
-Requires: %{name} = %{version}
-Provides: XFree86-Xdmx = %{version}-%{release}
-Provides: X11-Xdmx
-Requires: x11-server-xdmx
-
-%description Xdmx
-Xdmx is a proxy X server that uses one or more other X servers
-as its display devices. It provides multi-head X functionality
-for displays that might be located on different machines.
- Xdmx functions as a front-end X server that acts as a proxy
-to a set of back-end X servers. All of the visible rendering is
-passed to the back-end X servers. Clients connect to the Xdmx
-front-end, and everything appears as it would in a regular
-multi-head configuration. If Xinerama is enabled (e.g.,
-with +xinerama on the command line), the clients see a single large screen.
-
-Xdmx communicates to the back-end X servers using the standard X11 protocol,
-and standard and/or commonly available X server extensions.
-
-%files Xdmx 
 %defattr(-,root,root)
 
 #------------------------------------------------------------------------------
