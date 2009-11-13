@@ -1,8 +1,8 @@
 %define libxorg %mklibname xorg-x11
 
 Name: xorg-x11
-Version: 7.3
-Release: %mkrel 6
+Version: 7.5
+Release: %mkrel 1
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
@@ -281,26 +281,6 @@ this package.
 
 #------------------------------------------------------------------------------
 
-%package doc
-Summary: Documentation on various X11 programming interfaces
-Group: System/X11
-Obsoletes: XFree86-doc
-Provides: XFree86-doc = %{version}-%{release}
-Provides: X11-doc
-Requires: x11-docs
-
-%description doc
-X11-doc provides a great deal of extensive PostScript documentation
-on the various X APIs, libraries, and other interfaces.  If you need
-low level X documentation, you will find it here.  Topics include the
-X protocol, the ICCCM window manager standard, ICE session management,
-the font server API, etc.
-
-%files doc 
-%defattr(-,root,root)
-
-#------------------------------------------------------------------------------
-
 %package server
 Summary: The X server and associated modules
 Group: System/X11
@@ -351,94 +331,3 @@ listres, xbiff, xedit, xeyes, xcalc, xload and xman, among others.
 %defattr(-,root,root)
 
 #------------------------------------------------------------------------------
-
-%package Xvfb
-Summary: A virtual framebuffer X Windows System server for X11
-Group: System/X11
-Requires: %{name} = %{version}
-Obsoletes: XFree86-Xvfb
-Provides: XFree86-Xvfb = %{version}-%{release}
-Provides: X11-Xvfb
-Requires: x11-server-xvfb
-
-%description Xvfb
-Xvfb (X Virtual Frame Buffer) is an X Windows System server
-that is capable of running on machines with no display hardware and no
-physical input devices.  Xvfb emulates a dumb framebuffer using virtual
-memory.  Xvfb doesn't open any devices, but behaves otherwise as an X
-display.  Xvfb is normally used for testing servers.  Using Xvfb, the mfb
-or cfb code for any depth can be exercised without using real hardware
-that supports the desired depths.  Xvfb has also been used to test X
-clients against unusual depths and screen configurations, to do batch
-processing with Xvfb as a background rendering engine, to do load testing,
-to help with porting an X server to a new platform, and to provide an
-unobtrusive way of running applications which really don't need an X
-server but insist on having one.
-
-If you need to test your X server or your X clients, you may want to
-install Xvfb for that purpose.
-
-%files Xvfb 
-%defattr(-,root,root)
-
-#------------------------------------------------------------------------------
-
-%package xauth
-Summary: Authentication information tool for X
-Group: System/X11
-Requires: xauth 
-
-
-%description xauth
-The xauth program is used to edit and display the authorization information
-used in connecting to the X server.
-
-%files xauth 
-%defattr(-,root,root)
-
-#------------------------------------------------------------------------------
-
-%package Xnest
-Summary: A nested X11 server
-Group: System/X11
-Requires: %{name} = %{version}
-Obsoletes: XFree86-Xnest
-Provides: XFree86-Xnest = %{version}-%{release}
-Provides: X11-Xnest
-Requires: x11-server-xnest
-
-%description Xnest
-Xnest is an X Window System server which runs in an X window.
-Xnest is a 'nested' window server, actually a client of the
-real X server, which manages windows and graphics requests
-for Xnest, while Xnest manages the windows and graphics
-requests for its own clients.
-
-You will need to install Xnest if you require an X server which
-will run as a client of your real X server (perhaps for
-testing purposes).
-
-%files Xnest 
-%defattr(-,root,root)
-
-#------------------------------------------------------------------------------
-
-%package xfs
-Group: System/Servers
-Summary: Font server for X11
-Requires: initscripts >= 5.27-28mdk
-Requires: xfs
-Obsoletes: XFree86-xfs
-Provides: XFree86-xfs = %{version}-%{release}
-
-%description xfs
-This is a font server for X11.  You can serve fonts to other X servers
-remotely with this package, and the remote system will be able to use all
-fonts installed on the font server, even if they are not installed on the
-remote computer.
-
-%files xfs
-%defattr(-,root,root)
-
-#------------------------------------------------------------------------------
-
