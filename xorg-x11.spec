@@ -2,7 +2,7 @@
 
 Name: xorg-x11
 Version: 7.5
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
@@ -22,6 +22,8 @@ Requires: x11-font-misc
 Requires: libx11
 Requires: x11-data-cursor-themes
 Requires: xkbcomp
+
+Obsoletes: X11R6-contrib
 
 %description
 X11 metapackage
