@@ -2,7 +2,7 @@
 
 Name: xorg-x11
 Version: 7.5
-Release: %mkrel 2
+Release: %mkrel 3
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
@@ -16,7 +16,6 @@ Requires: x11-tools
 Requires: x11-docs
 Requires: fonts-ttf-dejavu
 Requires: fonts-ttf-liberation
-Requires: x11-font-bh-ttf
 Requires: x11-font-type1
 Requires: x11-font-misc 
 Requires: libx11
@@ -214,7 +213,6 @@ Provides: XFree86-75dpi-fonts = %{version}-%{release}
 Provides: X11-75dpi-fonts
 
 Requires: x11-font-adobe-75dpi
-Requires: x11-font-adobe-utopia-75dpi
 Requires: x11-font-alias
 Requires: x11-font-bh-75dpi
 Requires: x11-font-bh-lucidatypewriter-75dpi
@@ -243,7 +241,6 @@ Provides: XFree86-100dpi-fonts = %{version}-%{release}
 Provides: X11-100dpi-fonts
 
 Requires: x11-font-adobe-100dpi
-Requires: x11-font-adobe-utopia-100dpi
 Requires: x11-font-alias
 Requires: x11-font-bh-100dpi
 Requires: x11-font-bh-lucidatypewriter-100dpi
