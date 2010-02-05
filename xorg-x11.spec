@@ -2,7 +2,7 @@
 
 Name: xorg-x11
 Version: 7.5
-Release: %mkrel 3
+Release: %mkrel 4
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
@@ -253,29 +253,6 @@ X11-100dpi-fonts. This package contains a set of
 100 dpi fonts used on most Linux systems.
 
 %files 100dpi-fonts
-%defattr(-,root,root)
-
-#------------------------------------------------------------------------------
-
-%package cyrillic-fonts
-Summary: Cyrillic fonts - only needed on the server side
-Group: System/Fonts/X11 bitmap
-Obsoletes: XFree86-cyrillic-fonts
-Provides: XFree86-cyrillic-fonts = %{version}-%{release}
-Provides: X11-cyrillic-fonts
-
-Requires: x11-font-alias
-Requires: x11-font-cronyx-cyrillic
-Requires: x11-font-misc-cyrillic
-Requires: x11-font-screen-cyrillic
-Requires: x11-font-winitzki-cyrillic
-
-%description cyrillic-fonts
-The Cyrillic fonts included with XFree86 3.3.2 and higher. Those who
-use a language requiring the Cyrillic character set should install
-this package.
-
-%files cyrillic-fonts
 %defattr(-,root,root)
 
 #------------------------------------------------------------------------------
