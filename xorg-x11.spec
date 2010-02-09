@@ -8,7 +8,6 @@ Group: Development/X11
 License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
 
-Requires: x11-data-xkbdata
 Requires: x11-data-bitmaps
 Requires: x11-server-xorg
 Requires: x11-apps
@@ -20,7 +19,6 @@ Requires: x11-font-type1
 Requires: x11-font-misc 
 Requires: libx11
 Requires: x11-data-cursor-themes
-Requires: xkbcomp
 
 Obsoletes: X11R6-contrib
 
