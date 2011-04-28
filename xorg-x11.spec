@@ -2,7 +2,7 @@
 
 Name: xorg-x11
 Version: 7.5
-Release: %mkrel 6
+Release: 7
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
@@ -90,7 +90,7 @@ Group: Development/X11
 Provides: XFree86-devel = %{version}
 Provides: X11-devel = %{version}
 
-Requires: libapplewm-devel
+#Requires: libapplewm-devel
 Requires: libdmx-devel
 Requires: libdrm-devel
 Requires: libfontenc-devel
@@ -153,7 +153,7 @@ Group: Development/X11
 Provides: XFree86-static-devel = %{version}
 Provides: X11-static-devel = %{version}
 
-Requires: libapplewm-static-devel
+#Requires: libapplewm-static-devel
 Requires: libdmx-static-devel
 Requires: libdrm-static-devel
 Requires: libfontenc-static-devel
