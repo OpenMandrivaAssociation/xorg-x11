@@ -1,8 +1,8 @@
 %define libxorg %mklibname xorg-x11
 
 Name: xorg-x11
-Version: 7.5
-Release: 7
+Version: 7.6
+Release: 1
 Summary: X11 metapackage
 Group: Development/X11
 License: MIT
