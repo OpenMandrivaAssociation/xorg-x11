@@ -2,7 +2,7 @@
 
 Name:		xorg-x11
 Version:	7.7
-Release:	1
+Release:	2
 Summary:	X11 metapackage
 Group:		Development/X11
 License:	MIT
@@ -31,7 +31,6 @@ X11 metapackage
 Summary:	X11 libraries
 Group:		Development/X11
 
-Requires:	libapplewm
 Requires:	libdmx
 Requires:	libdrm
 Requires:	libfontenc
