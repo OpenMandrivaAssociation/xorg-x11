@@ -2,7 +2,7 @@
 
 Name:		xorg-x11
 Version:	7.7
-Release:	3
+Release:	4
 Summary:	X11 metapackage
 Group:		Development/X11
 License:	MIT
@@ -22,7 +22,7 @@ Requires:	x11-data-cursor-themes
 Obsoletes:	X11R6-contrib
 
 %description
-X11 metapackage
+X11 metapackage.
 
 %files
 
@@ -96,7 +96,7 @@ Requires:	libmesaglu-devel
 Requires:	pkgconfig(glut)
 #Requires:	pkgconfig(glw)
 Requires:	liboldx-devel
-Requires:	libsm-devel
+Requires:	pkgconfig(sm)
 Requires:	libwindowswm-devel
 Requires:	libx11-devel
 Requires:	libxau-devel
@@ -136,7 +136,7 @@ Requires:	x11-xtrans-devel
 Obsoletes:	 %{libxorg}-static-devel
 
 %description -n %{libxorg}-devel
-Development tools and files for X11
+Development tools and files for X11.
 
 %files -n %{libxorg}-devel
 
