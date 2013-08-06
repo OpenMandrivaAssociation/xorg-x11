@@ -2,7 +2,7 @@
 
 Name:		xorg-x11
 Version:	7.7
-Release:	4
+Release:	5
 Summary:	X11 metapackage
 Group:		Development/X11
 License:	MIT
@@ -73,7 +73,7 @@ Requires:	libxxf86misc
 Requires:	libxxf86vm
 
 %description -n %{libxorg}
-X11 libraries
+X11 libraries.
 
 %files -n %{libxorg}
 
