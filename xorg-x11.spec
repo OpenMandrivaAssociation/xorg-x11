@@ -92,7 +92,7 @@ Requires:	libfs-devel
 Requires:	libice-devel
 Requires:	liblbxutil-devel
 Requires:	pkgconfig(gl)
-Requires:	libmesaglu-devel
+Requires:	glu-devel
 Requires:	pkgconfig(glut)
 #Requires:	pkgconfig(glw)
 Requires:	liboldx-devel
