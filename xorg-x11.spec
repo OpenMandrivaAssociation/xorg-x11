@@ -2,7 +2,7 @@
 
 Name:		xorg-x11
 Version:	7.7
-Release:	5
+Release:	6
 Summary:	X11 metapackage
 Group:		Development/X11
 License:	MIT
@@ -54,7 +54,7 @@ Requires:	libxfontcache
 Requires:	libxfont
 Requires:	libxft
 Requires:	libxi
-Requires:	libxinerama
+Requires:	%{_lib}xinerama1
 Requires:	libxkbfile
 Requires:	libxkbui
 Requires:	libxmu
@@ -63,14 +63,14 @@ Requires:	libxrandr
 Requires:	libxrender
 Requires:	libxres
 Requires:	libxscrnsaver
-Requires:	libxt
+Requires:	%{_lib}xt6
 Requires:	libxtrap
-Requires:	libxtst
-Requires:	libxv
+Requires:	%{_lib}xtst6
+Requires:	%{_lib}xv1
 Requires:	libxvmc
-Requires:	libxxf86dga
+Requires:	%{_lib}xxf86dga1
 Requires:	libxxf86misc
-Requires:	libxxf86vm
+Requires:	%{_lib}xxf86vm1
 
 %description -n %{libxorg}
 X11 libraries.
@@ -98,9 +98,9 @@ Requires:	pkgconfig(glut)
 Requires:	liboldx-devel
 Requires:	pkgconfig(sm)
 Requires:	libwindowswm-devel
-Requires:	libx11-devel
+Requires:	pkgconfig(x11)
 Requires:	libxau-devel
-Requires:	libxaw-devel
+Requires:	xaw-devel
 Requires:	libxcomposite-devel
 Requires:	libxcursor-devel
 Requires:	libxdamage-devel
@@ -116,7 +116,7 @@ Requires:	libxinerama-devel
 Requires:	libxkbfile-devel
 Requires:	libxkbui-devel
 Requires:	libxmu-devel
-Requires:	libxpm-devel
+Requires:	xpm-devel
 Requires:	libxrandr-devel
 Requires:	libxrender-devel
 Requires:	libxres-devel
@@ -124,7 +124,7 @@ Requires:	libxscrnsaver-devel
 Requires:	libxt-devel
 Requires:	libxtrap-devel
 Requires:	libxtst-devel
-Requires:	libxv-devel
+Requires:	xv-devel
 Requires:	libxvmc-devel
 Requires:	libxxf86dga-devel
 Requires:	libxxf86misc-devel
