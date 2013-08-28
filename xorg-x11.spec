@@ -124,7 +124,7 @@ Requires:	libxscrnsaver-devel
 Requires:	libxt-devel
 Requires:	libxtrap-devel
 Requires:	libxtst-devel
-Requires:	xv-devel
+Requires:	pkgconfig(xv)
 Requires:	libxvmc-devel
 Requires:	libxxf86dga-devel
 Requires:	libxxf86misc-devel
