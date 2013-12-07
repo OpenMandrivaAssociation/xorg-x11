@@ -2,7 +2,7 @@
 
 Name:		xorg-x11
 Version:	7.7
-Release:	9
+Release:	10
 Summary:	X11 metapackage
 Group:		Development/X11
 License:	MIT
