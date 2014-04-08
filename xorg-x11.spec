@@ -2,14 +2,14 @@
 
 Name:		xorg-x11
 Version:	7.7
-Release:	10
+Release:	11
 Summary:	X11 metapackage
 Group:		Development/X11
 License:	MIT
 
 Requires:	x11-data-bitmaps
 Requires:	x11-server-xorg
-Requires:	x11-apps
+#Requires:	x11-apps
 Requires:	x11-tools
 Requires:	x11-docs
 Requires:	fonts-ttf-dejavu
